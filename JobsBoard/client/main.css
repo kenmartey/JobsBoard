@@ -1,0 +1,35 @@
+/*
+================BOOTSTRAP CSS FOR THE TABLE=================
+*/
+.col-md-6 {
+	width: 100%;
+}
+.row{
+	margin-top:40px;
+	padding: 0 10px;
+}
+.clickable{
+	cursor: pointer;   
+}
+
+.panel-heading div {
+	margin-top: -18px;
+	font-size: 15px;
+}
+.panel-heading div span{
+	margin-left:5px;
+}
+.panel-body{
+	display: none;
+}
+
+/*
+============= BOOTSTRAP CSS ==============
+*/
+/*.navbar-brand
+{
+	background: url(img/mest-logo.png) no-repeat left center;
+	height: 20px;
+	width: 100px;
+}
+*/

@@ -5,6 +5,11 @@
 <body>
 	{{> navigationbar}}
 	{{> intro}}
+	{{> form}}
+	{{#afModal class="btn btn-primary" collection="Jobs" operation="insert"}}
+	Add a new post
+	{{/afModal}}
+	{{> showinformation}}
 </body>
 
 
@@ -46,3 +51,55 @@
 <template name="intro">
 	<h3>This is the introduction</h3>
 </template>
+
+<template name="form">
+	{{> autoformModals collection="Jobs" id="insertJobForm" type="insert"}}
+</template>
+
+<template name="showinformation">
+	<div class="container">
+		<h3>Mest Projects</h3>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Available Jobs at Mest</h3>
+						<div class="pull-right">
+							<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+								<i class="glyphicon glyphicon-filter"></i>
+							</span>
+						</div>
+					</div>
+					<div class="panel-body">
+						<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+					</div>
+					<table class="table table-hover" id="dev-table">
+						<thead>
+							<tr>
+								
+								<th>Job Title</th>
+								<th>Job Description</th>
+								<th>Contact Information</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							{{#each showinformation}}
+							<tr>
+								
+								<td>{{jobtitle}}</td>
+								<td>{{jobsdescription}}</td>
+								<td>{{contactinformation}} </td>
+								<td>{{#afModal class="btn btn-primary" collection="Jobs" operation="update" doc=_id}}
+									Update post
+									{{/afModal}}</td>
+								</tr>
+								{{/each}}
+							</tbody>
+						</table>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</template>
