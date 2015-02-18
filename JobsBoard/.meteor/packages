@@ -12,3 +12,9 @@ twbs:bootstrap
 aldeed:autoform
 aldeed:collection2
 yogiben:autoform-modals
+accounts-base
+accounts-password
+ian:accounts-ui-bootstrap-3
+iron:router
+accounts-github
+accounts-facebook

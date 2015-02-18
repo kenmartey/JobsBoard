@@ -33,3 +33,14 @@
 	width: 100px;
 }
 */
+.navbar {
+	box-shadow: 3px 3px 3px #999; 
+	-moz-box-shadow: 3px 3px 3px #999;
+	-webkit-box-shadow: 3px 3px 3px #999;
+	height: 70px;
+}
+
+.navbar-default{
+	background-color: #03a9f4;
+	color: white;
+}
