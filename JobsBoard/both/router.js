@@ -9,6 +9,7 @@ Router.route('/', function(){
 {
 	name: 'home'
 });
+
 Router.route('/projects', function () {
 	this.render('projects');
 }, {
@@ -49,7 +50,7 @@ Router.route('/projects/details/:_id', function(){
 
 
 Router.route('/about', function () {
-	this.render('about');
+	this.render('cardLayout');
 }, {
 	name: 'about'
 });

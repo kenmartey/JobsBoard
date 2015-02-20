@@ -161,3 +161,144 @@ why you want the job
 qualification
 contact information 
 email
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a href="{{pathFor 'projectsCategory' category='html'}}" class="btn btn-primary">HTML</a>
+
+<a href="{{pathFor 'projectsCategory' category='javaScript'}}" class="btn btn-success">JavaScript</a>
+
+<a href="{{pathFor 'projectsCategory' category='driver'}}" class="btn btn-info">Driver</a>
+
+<div class="row">
+<div class="col-md-6">
+<div class="panel panel-primary">
+<div class="panel-heading">
+<h3 class="panel-title">Available Jobs at Mest</h3>
+<div class="pull-right">
+<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+<i class="glyphicon glyphicon-filter"></i>
+</span>
+</div>
+</div>
+<div class="panel-body">
+<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+</div>
+<table class="table table-hover" id="dev-table">
+<thead>
+<tr>
+
+<th>Job Title</th>
+<th>Job Description</th>
+<th>Contact Information</th>
+<th>Job Category</th>
+</tr>
+</thead>
+
+<tbody>
+{{#each projects}}
+<tr>
+
+<td>{{title}}</td>
+<td>{{description}}</td>
+<td>{{contactInformation}} </td>
+<td>{{category}} </td>
+<td>
+{{#if currentUser}}
+{{#afModal class="btn btn-primary" collection="Jobs" operation="update" doc=_id}}
+Update post
+{{/afModal}}
+
+{{#afModal class="btn btn-danger" collection="Jobs" operation="remove" doc=_id}}
+Delete post
+{{/afModal}}
+{{/if}}
+<a href="{{pathFor 'projectDetails' _id=_id}}" class="btn btn-info">Readmore</a>
+</td>
+<!-- <td> -->
+<!-- </td> -->
+</tr>
+{{/each}}
+</tbody>
+</table>
+</div>
+</div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+==================using card layout in projects.html=========================\
+
+<template name="projects">
+
+<div class="container">
+{{# if currentUser}}
+{{#afModal class="btn btn-primary" collection="Jobs" operation="insert"}}
+Add a new Job
+{{/afModal}}
+{{> autoformModals collection="Jobs" id="insertJobForm" type="insert"}}
+{{/if}}
+</div> 
+<div class="container">
+<h3>Mest Projects</h3>
+</div>
+
+<section>
+<article class="right-l">
+<div class="card">
+<div class="title">
+<p id="card-title" align="left"><strong>{{title}}</strong></p>
+</div>
+<div class="demo-live">
+{{description}}
+{{contactInformation}} 
+{{category}}
+</div>
+<div class="demo-source-head">
+<span class="pointer-up"></span>
+
+{{#if currentUser}}
+{{#afModal class="btn btn-primary" collection="Jobs" operation="update" doc=_id}}
+Update post
+{{/afModal}}
+
+{{#afModal class="btn btn-danger" collection="Jobs" operation="remove" doc=_id}}
+Delete post
+{{/afModal}}
+{{/if}}
+</div>
+</div><br>
+</article>
+</section>
+</template>
+
