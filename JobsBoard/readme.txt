@@ -128,3 +128,36 @@ Add a new Job
 {{/afModal}}
 {{> autoformModals collection="Jobs" id="insertJobForm" type="insert"}}
 {{/if}}
+
+//Another way of showing data in projects instead of registerhelpers
+data: function(){
+return {
+projects: Projects.find().fetch(),
+pageTitle: 'this is my page'
+}
+}
+
+
+
+
+cards layout
+.vm>li {
+list-style-type: none;
+width: 230px;
+background: rgba(255, 255, 255, 1);
+border-radius: 5px;
+transition: all 0.5s;
+top: 100%;
+left: 387px;
+}
+
+fields for application form
+FullName
+Date of Birth
+Nationality
+Upload cv
+Upload Picture 
+why you want the job
+qualification
+contact information 
+email

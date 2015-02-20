@@ -1,0 +1,35 @@
+<template name="projectDetails">
+	{{#afModal class="btn btn-success" collection="Applications" operation="insert"}}
+	Apply
+	{{/afModal}}
+	{{> autoformModals collection="Applications" id="insertApplicationForm" type="insert"}}
+	The details of one project is to show here but its not showing
+	
+	<table class="table table-hover" id="dev-table">
+		<thead>
+			<tr>
+
+				<th>Job Title</th>
+				<th>Job Description</th>
+				<th>Contact Information</th>
+				<th>Job Category</th>
+			</tr>
+		</thead>
+
+		<tbody>
+
+			<tr>
+
+				<td>{{projects.title}}</td>
+				<td>{{projects.description}}</td>
+				<td>{{projects.contactInformation}} </td>
+				<td>{{projects.category}} </td>
+				<td>
+				</td>
+				<!-- <td> -->
+				<!-- </td> -->
+			</tr>
+
+		</tbody>
+	</table>
+</template>

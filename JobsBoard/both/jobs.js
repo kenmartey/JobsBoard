@@ -1,12 +1,12 @@
 Jobs = new Mongo.Collection('jobs');
 Jobs.attachSchema(new SimpleSchema({
 
-	jobtitle: {
+	title: {
 		type: String,
 		label: "Title",
 		max: 200
 	},
-	jobsdescription: {
+	description: {
 		type: String,
 		label: "Brief summary",
 		optional: true,
@@ -15,10 +15,42 @@ Jobs.attachSchema(new SimpleSchema({
 			rows: 5
 		}
 	},
-	contactinformation: {
+	contactInformation: {
 		type: String,
 		regEx: SimpleSchema.RegEx.Email,
 		label: "Contact Email"
-	}
+	},
+	category: {
+		type: String,
+		
+		autoform:{
+			options: function(){
+				return [{
 
+					label: "JavaScript",
+					value: "javaScript"
+				},{
+					label: "Html",
+					value: "html"
+				},{
+
+					label: "Meteor",
+					value: "meteor"
+				},{
+
+					label: "Kitchen Staff",
+					value: "kitchen staff"
+				},{
+					label: "Administrative Staff",
+					value: "administrative staff"
+				},{
+
+					label: "Driver",
+					value: "driver"
+				}
+				]
+			}
+		}
+	},
+	
 }));
