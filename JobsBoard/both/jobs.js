@@ -6,6 +6,7 @@ Jobs.attachSchema(new SimpleSchema({
 		label: "Title",
 		max: 200
 	},
+	
 	description: {
 		type: String,
 		label: "Brief summary",
@@ -20,9 +21,9 @@ Jobs.attachSchema(new SimpleSchema({
 		regEx: SimpleSchema.RegEx.Email,
 		label: "Contact Email"
 	},
+
 	category: {
 		type: String,
-		
 		autoform:{
 			options: function(){
 				return [{
@@ -51,6 +52,21 @@ Jobs.attachSchema(new SimpleSchema({
 				]
 			}
 		}
+
 	},
-	
+
+	// createdby:{
+
+	// 	options: function(){
+	// 		createdby: currentUserId
+	// 		return currentUserId;
+	// 	}
+	// },
+
+// 	userId: {
+// 		autoValue: function() {
+// 			return Meteor.userId;
+
+// 		}
+// 	},
 }));

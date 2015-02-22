@@ -2,7 +2,7 @@
 ================BOOTSTRAP CSS FOR THE TABLE=================
 */
 .col-md-6 {
-	width: 100%;
+	/*width: 100%;*/
 }
 .row{
 	margin-top:40px;
@@ -38,10 +38,12 @@
 	-moz-box-shadow: 3px 3px 3px #999;
 	-webkit-box-shadow: 3px 3px 3px #999;
 	height: 70px;
+	border-radius: 0px;
 }
 
 .navbar-default{
 	background-color: #03a9f4;
+	border-color: #03a9f4;
 
 }
 .navbar-default .navbar-brand {
@@ -78,12 +80,13 @@
 	}*/
 
 	.card {
-		width: 30%;
+		width: 100%;
 		background: #6AA8A8;
 		border: solid 3px #ccc;
 		font-size: 16px;
 		margin-left: 10px;
 		box-shadow: 5px 5px 5px #888888;
+		margin:8px;
 
 	}
 
@@ -124,18 +127,20 @@
 		float: left;
 		margin-right: 2%;
 		}*/
-	.title{
-		margin-top: 5px;
-		height: 40px;
-		border-color: black;
-		font-size:20px;
+		.title{
+			margin-top: 5px;
+			height: 40px;
+			border-color: black;
+			font-size:20px;
 
-	}
-	#card-title{
-		margin-left: 10px;
-		margin-top: 10px;
+		}
+		#card-title{
+			margin-left: 10px;
+			margin-top: 10px;
 
-	}
-	#contact-alignment{
-		margin-top: 100px;
-	}
+		}
+		#contact-alignment{
+			margin-top: 100px;
+		}
+
+		

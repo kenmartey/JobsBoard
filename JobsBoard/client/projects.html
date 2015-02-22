@@ -15,70 +15,14 @@
 		<a href="{{pathFor 'projectsCategory' category='javaScript'}}" class="btn btn-success">JavaScript</a>
 
 		<a href="{{pathFor 'projectsCategory' category='driver'}}" class="btn btn-info">Driver</a>
+	</div> 
 
-		<div class="row">
-			<div class="col-md-6">
-				<div class="panel panel-primary">
-					<div class="panel-heading">
-						<h3 class="panel-title">Available Jobs at Mest</h3>
-						<div class="pull-right">
-							<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
-								<i class="glyphicon glyphicon-filter"></i>
-							</span>
-						</div>
-					</div>
-					<div class="panel-body">
-						<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
-					</div>
-					<table class="table table-hover" id="dev-table">
-						<thead>
-							<tr>
-								
-								<th>Job Title</th>
-								<th>Job Description</th>
-								<th>Contact Information</th>
-								<th>Job Category</th>
-							</tr>
-						</thead>
-
-						<tbody>
-							{{#each projects}}
-							<tr>
-								
-								<td>{{title}}</td>
-								<td>{{description}}</td>
-								<td>{{contactInformation}} </td>
-								<td>{{category}} </td>
-								<td>
-									{{#if currentUser}}
-									{{#afModal class="btn btn-primary" collection="Jobs" operation="update" doc=_id}}
-									Update post
-									{{/afModal}}
-
-									{{#afModal class="btn btn-danger" collection="Jobs" operation="remove" doc=_id}}
-									Delete post
-									{{/afModal}}
-									{{/if}}
-									<a href="{{pathFor 'projectDetails' _id=_id}}" class="btn btn-info">Readmore</a>
-								</td>
-								<!-- <td> -->
-								<!-- </td> -->
-							</tr>
-							{{/each}}
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-		</div>
-	</div>
-	
 
 	<section>
 		<div class="container">
-			{{# each projects}}
 			<div class="row">
-				<div class="col-md-6">
+				{{# each projects}}
+				<div class="col-md-4">
 					<div class="card">
 						<div class="title">
 							<p id="card-title" align="left"><strong>{{title}}</strong></p>
@@ -95,19 +39,22 @@
 
 							{{#if currentUser}}
 							{{#afModal class="btn btn-primary" collection="Jobs" operation="update" doc=_id}}
-							Update post
+							Update 
 							{{/afModal}}
 
 							{{#afModal class="btn btn-danger" collection="Jobs" operation="remove" doc=_id}}
-							Delete post
+							Delete 
 							{{/afModal}}
 							{{/if}}
+							<a href="{{pathFor 'projectDetails' _id=_id}}" class="btn btn-info">Readmore</a>
 						</div>
-					</div><br>
-				</div>
-			</div>
-			{{/each}}
-		</div>
-	</section>
-</template>
 
+					</div>
+				</div>
+				{{/each}}
+
+			</div>
+		</div>
+	</section> 
+
+</template>

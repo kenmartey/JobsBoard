@@ -20,6 +20,21 @@ Router.route('/projects', function () {
 		}
 	}
 });
+//==============
+// Router.route('/projects/userId/projects', function(){
+// 	this.render('projects');
+// },
+// {
+// 	name:'projectsCategory',
+// 	data: function(){
+// 		return {
+// 			projects: Jobs.find({Meteor.userId: this.params.Meteor.userId()).fetch().reverse(),
+// 				pageTitle: 'projects:' + this.params.userId
+// 			}
+// 		}
+
+// 	});
+//===================
 
 Router.route('/projects/:category/', function(){
 	this.render('projects');
