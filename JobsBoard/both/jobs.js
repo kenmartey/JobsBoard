@@ -69,4 +69,13 @@ Jobs.attachSchema(new SimpleSchema({
 
 // 		}
 // 	},
+owner: {
+	type: String,
+	autoform: {
+		omit: true
+	},
+	autoValue: function(){
+		return Meteor.userId();
+	}
+}
 }));
