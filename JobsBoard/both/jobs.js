@@ -1,4 +1,16 @@
-Jobs = new Mongo.Collection('jobs');
+Job = function(doc) {
+	_.extend(this, doc);
+};
+
+_.extend(Job.prototype, {
+	owned: function(){
+		return Meteor.userId() == this.owner;
+	}
+});
+
+Jobs = new Mongo.Collection('jobs', {
+	transform: function(doc) { return new Job(doc)}
+});
 Jobs.attachSchema(new SimpleSchema({
 
 	title: {

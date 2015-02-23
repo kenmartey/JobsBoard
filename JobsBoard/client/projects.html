@@ -6,6 +6,8 @@
 		Add a new Job
 		{{/afModal}}
 		{{> autoformModals collection="Jobs" id="insertJobForm" type="insert"}}
+		{{else}}
+		please Register or login to Add a Job
 		{{/if}}
 	</div> 
 	<div class="container">
@@ -37,7 +39,7 @@
 						<div class="demo-source-head">
 							<span class="pointer-up"></span>
 
-							{{#if currentUser}}
+							{{#if owned}}
 							{{#afModal class="btn btn-primary" collection="Jobs" operation="update" doc=_id}}
 							Update 
 							{{/afModal}}

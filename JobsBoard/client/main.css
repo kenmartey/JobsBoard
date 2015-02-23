@@ -82,7 +82,7 @@
 	.card {
 		width: 100%;
 		background: #6AA8A8;
-		border: solid 3px #ccc;
+		/*border: solid 3px #ccc;*/
 		font-size: 16px;
 		margin-left: 10px;
 		box-shadow: 5px 5px 5px #888888;
