@@ -1,4 +1,4 @@
-<template name="projects">
+<template name="jobs">
 
 	<div class="container">
 		{{# if currentUser}}
@@ -10,20 +10,21 @@
 		please Register or login to Add a Job
 		{{/if}}
 	</div> 
+	
 	<div class="container">
-		<h3>Mest Projects</h3>
-		<a href="{{pathFor 'projectsCategory' category='html'}}" class="btn btn-primary">HTML</a>
+		<h3>Mest Jobs</h3>
+		<a href="{{pathFor 'jobsCategory' category='html'}}" class="btn btn-primary">HTML</a>
 
-		<a href="{{pathFor 'projectsCategory' category='javaScript'}}" class="btn btn-success">JavaScript</a>
+		<a href="{{pathFor 'jobsCategory' category='javaScript'}}" class="btn btn-success">JavaScript</a>
 
-		<a href="{{pathFor 'projectsCategory' category='driver'}}" class="btn btn-info">Driver</a>
+		<a href="{{pathFor 'jobsCategory' category='driver'}}" class="btn btn-info">Driver</a>
 	</div> 
 
 
 	<section>
 		<div class="container">
 			<div class="row">
-				{{# each projects}}
+				{{# each jobs}}
 				<div class="col-md-4">
 					<div class="card">
 						<div class="title">
@@ -40,15 +41,15 @@
 							<span class="pointer-up"></span>
 
 							{{#if owned}}
-							{{#afModal class="btn btn-primary" collection="Jobs" operation="update" doc=_id}}
-							Update 
+							{{#afModal class="btn btn-primary" collection="Jobs" operation="update" doc=_id}}<i class="fa fa-pencil"></i>
+
 							{{/afModal}}
 
-							{{#afModal class="btn btn-danger" collection="Jobs" operation="remove" doc=_id}}
-							Delete 
+							{{#afModal class="btn btn-danger" collection="Jobs" operation="remove" doc=_id}}<i class="fa fa-trash-o"></i>
+							
 							{{/afModal}}
 							{{/if}}
-							<a href="{{pathFor 'projectDetails' _id=_id}}" class="btn btn-info">Readmore</a>
+							<a href="{{pathFor 'jobDetails' _id=_id}}" class="btn btn-info">Readmore</a>
 						</div>
 
 					</div>

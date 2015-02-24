@@ -1,4 +1,7 @@
 <template name="home">
+	<script>
+		new WOW().init();
+	</script>
 	<section class="slider" id="top">
 		<div id="novelty-home-slider" class="carousel slide" data-ride="carousel">
 
@@ -7,17 +10,17 @@
 					<img src="img/slider-image-1.jpg" alt="...">
 					<div class="carousel-caption">
 						<h1>Meltwater Entrepreneurial School of Technology </h1>
-						<p class="hidden-xs">Generosity. Positivity. Standard.
+						<p class="hidden-xs"><h5>Generosity. Positivity. Standard.</h5>
 						</p>
-						<a href="#" class="hidden-xs btn btn-outline btn-primary btn-icon active btn-lg btn-rounded wow bounceInUp" data-wow-delay="0.5s">Take a Tour<span class="fa fa-angle-right icon-with-btn"></span></a>
-						<a href="#" class="hidden-xs btn btn-outline btn-white btn-icon btn-lg btn-rounded wow bounceInUp" data-wow-delay="0.7s">Find Jobs now<span class="fa fa-angle-right icon-with-btn"></span></a>
+						<a href="http://www.meltwater.org" class="hidden-xs btn btn-outline btn-primary btn-icon active btn-lg btn-rounded wow bounceInUp" data-wow-delay="0.5s">Take a Tour<!-- <span class="fa fa-angle-right icon-with-btn"></span> --></a>
+						<a href="{{pathFor 'jobs'}}" class="hidden-xs btn btn-outline btn-white btn-icon btn-lg btn-rounded wow bounceInUp" data-wow-delay="0.7s">Find Jobs now<!-- <span class="fa fa-angle-right icon-with-btn"></span> --></a>
 					</div>
 				</div>
 				<div class="item">
 					<img src="img/slider-image-2.jpg" alt="...">
 					<div class="carousel-caption">
-						<h1 class="wow bounceInDown">Ultra Responsive with SASS/COMPASS files</h1>
-						<p class="hidden-xs wow bounceInLeft">Lorem ipsum dolor sit amet, consectetur malut bila na la yaraan adipisicing elit.
+						<h1 class="wow bounceInDown">Great Standard and Difference</h1>
+						<p class="hidden-xs wow bounceInLeft"><h5>Powerful Brains, Creative Environment and Awesome people</h5>
 						</p>
 						<a href="#" class="hidden-xs btn btn-outline btn-primary btn-icon active btn-lg btn-rounded wow bounceInLeft" data-wow-delay="0.5s">Take a Tour<span class="fa fa-angle-right icon-with-btn"></span></a>
 						<a href="#" class="hidden-xs btn btn-outline btn-white btn-icon btn-lg btn-rounded wow bounceInRight" data-wow-delay="0.7s">buy it now<span class="fa fa-angle-right icon-with-btn"></span></a>
@@ -27,7 +30,7 @@
 					<img src="img/slider-image-3.jpg" alt="...">
 					<div class="carousel-caption">
 						<h1 class="wow bounceInLeft">Mest Job site</h1>
-						<p class="hidden-xs">Apply for a job here and become a good leader
+						<p class="hidden-xs"><h5>Apply for a job here and become a good leader</h5>
 						</p>
 						<a href="#" class="hidden-xs btn btn-outline btn-primary btn-icon active btn-lg btn-rounded wow fadeInUp" data-wow-delay="0.5s">Take a Tour<span class="fa fa-angle-right icon-with-btn"></span></a>
 						<a href="#" class="hidden-xs btn btn-outline btn-white btn-icon btn-lg btn-rounded wow fadeInDown" data-wow-delay="0.7s">buy it now<span class="fa fa-angle-right icon-with-btn"></span></a>
@@ -48,17 +51,17 @@
 		</div>
 
 	</section>
-    <!--
-    ++++++++++++++++++++++++++
-    // Services Starts
-    ++++++++++++++++++++++++++
+<!--
+++++++++++++++++++++++++++
+// Services Starts
+++++++++++++++++++++++++++
 -->
 <section id="services">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
 				<h2 class="section-heading">Jobs Available at Mest</h2>
-				<h3 class="section-sub-heading">Apply Now and become part of the community.</h3>
+				<h3 class="section-sub-heading">Apply Now and be part of the community.</h3>
 			</div>
 		</div>
 		<div class="services">
@@ -66,25 +69,25 @@
 				<div class="service col-md-3 col-sm-6 col-xs-12 wow bounceInLeft" data-wow-delay="0.2s">
 					<div class="fa-4x service-icon icon icon-Web animate-icon"></div>
 					<h3>Fellow</h3>
-					<p>Built with great care.</p>
+					<p>Intelligence and Excellence.</p>
 					<a href="#" class="btn btn-outline btn-primary btn-medium btn-rounded wow bounceInUp" data-wow-delay="0.1s">read more</a>
 				</div>
 				<div class="service col-md-3  col-sm-6 col-xs-12 wow bounceInLeft" data-wow-delay="0.3s">
 					<div class="fa-4x service-icon icon icon-ChemicalGlass animate-icon"></div>
 					<h3>Cook</h3>
-					<p>From the first pixel.</p>
+					<p>Creative and Neat.</p>
 					<a href="#" class="btn btn-outline btn-primary btn-medium btn-rounded wow bounceInUp" data-wow-delay="0.2s">read more</a>
 				</div>
 				<div class="service col-md-3  col-sm-6 col-xs-12 wow bounceInRight" data-wow-delay="0.4s">
 					<div class="fa-4x service-icon icon icon-Phone animate-icon"></div>
 					<h3>Driver</h3>
-					<p>For every device.</p>
+					<p>Fast and Furious.</p>
 					<a href="#" class="btn btn-outline btn-primary btn-medium btn-rounded wow bounceInUp" data-wow-delay="0.3s">read more</a>
 				</div>
 				<div class="service col-md-3  col-sm-6 col-xs-12 wow bounceInRight" data-wow-delay="0.5s">
 					<div class="fa-4x service-icon icon icon-Mouse animate-icon"></div>
-					<h3>Easy-to-use</h3>
-					<p>And easy to customize.</p>
+					<h3>Cleaning</h3>
+					<p>Health is our Priority.</p>
 					<a href="#" class="btn btn-outline btn-primary btn-medium btn-rounded wow bounceInUp" data-wow-delay="0.4s">read more</a>
 				</div>
 			</div>
@@ -92,5 +95,4 @@
 	</div>
 </section>
 </template>
-
 

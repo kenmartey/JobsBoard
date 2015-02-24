@@ -302,3 +302,104 @@ Delete post
 </section>
 </template>
 
+// =============================== Home Page=========================== //
+
+<template name="home">
+<script>
+new WOW().init();
+</script>
+<section class="slider" id="top">
+<div id="novelty-home-slider" class="carousel slide" data-ride="carousel">
+
+<div class="carousel-inner" role="listbox">
+<div class="item active">
+<img src="img/slider-image-1.jpg" alt="...">
+<div class="carousel-caption">
+<h1>Meltwater Entrepreneurial School of Technology </h1>
+<p class="hidden-xs">Generosity. Positivity. Standard.
+</p>
+<a href="#" class="hidden-xs btn btn-outline btn-primary btn-icon active btn-lg btn-rounded wow bounceInUp" data-wow-delay="0.5s">Take a Tour<span class="fa fa-angle-right icon-with-btn"></span></a>
+<a href="#" class="hidden-xs btn btn-outline btn-white btn-icon btn-lg btn-rounded wow bounceInUp" data-wow-delay="0.7s">Find Jobs now<span class="fa fa-angle-right icon-with-btn"></span></a>
+</div>
+</div>
+<div class="item">
+<img src="img/slider-image-2.jpg" alt="...">
+<div class="carousel-caption">
+<h1 class="wow bounceInDown">Great Standard and Difference</h1>
+<p class="hidden-xs wow bounceInLeft">Powerful Brains, Creative Environment and Awesome people
+</p>
+<a href="#" class="hidden-xs btn btn-outline btn-primary btn-icon active btn-lg btn-rounded wow bounceInLeft" data-wow-delay="0.5s">Take a Tour<span class="fa fa-angle-right icon-with-btn"></span></a>
+<a href="#" class="hidden-xs btn btn-outline btn-white btn-icon btn-lg btn-rounded wow bounceInRight" data-wow-delay="0.7s">buy it now<span class="fa fa-angle-right icon-with-btn"></span></a>
+</div>
+</div>
+<div class="item">
+<img src="img/slider-image-3.jpg" alt="...">
+<div class="carousel-caption">
+<h1 class="wow bounceInLeft">Mest Job site</h1>
+<p class="hidden-xs">Apply for a job here and become a good leader
+</p>
+<a href="#" class="hidden-xs btn btn-outline btn-primary btn-icon active btn-lg btn-rounded wow fadeInUp" data-wow-delay="0.5s">Take a Tour<span class="fa fa-angle-right icon-with-btn"></span></a>
+<a href="#" class="hidden-xs btn btn-outline btn-white btn-icon btn-lg btn-rounded wow fadeInDown" data-wow-delay="0.7s">buy it now<span class="fa fa-angle-right icon-with-btn"></span></a>
+</div>
+</div>
+
+</div>
+
+<!-- Controls -->
+<a class="left carousel-control" href="#novelty-home-slider" role="button" data-slide="prev">
+<span class="fa fa-chevron-left" aria-hidden="true"></span>
+<span class="sr-only">Previous</span>
+</a>
+<a class="right carousel-control" href="#novelty-home-slider" role="button" data-slide="next">
+<span class="fa fa-chevron-right" aria-hidden="true"></span>
+<span class="sr-only">Next</span>
+</a>
+</div>
+
+</section>
+<!--
+++++++++++++++++++++++++++
+// Services Starts
+++++++++++++++++++++++++++
+-->
+<section id="services">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<h2 class="section-heading">Jobs Available at Mest</h2>
+<h3 class="section-sub-heading">Apply Now and be part of the community.</h3>
+</div>
+</div>
+<div class="services">
+<div class="row">
+<div class="service col-md-3 col-sm-6 col-xs-12 wow bounceInLeft" data-wow-delay="0.2s">
+<div class="fa-4x service-icon icon icon-Web animate-icon"></div>
+<h3>Fellow</h3>
+<p>Intelligence and Excellence.</p>
+<a href="#" class="btn btn-outline btn-primary btn-medium btn-rounded wow bounceInUp" data-wow-delay="0.1s">read more</a>
+</div>
+<div class="service col-md-3  col-sm-6 col-xs-12 wow bounceInLeft" data-wow-delay="0.3s">
+<div class="fa-4x service-icon icon icon-ChemicalGlass animate-icon"></div>
+<h3>Cook</h3>
+<p>Creative and Neat.</p>
+<a href="#" class="btn btn-outline btn-primary btn-medium btn-rounded wow bounceInUp" data-wow-delay="0.2s">read more</a>
+</div>
+<div class="service col-md-3  col-sm-6 col-xs-12 wow bounceInRight" data-wow-delay="0.4s">
+<div class="fa-4x service-icon icon icon-Phone animate-icon"></div>
+<h3>Driver</h3>
+<p>Fast and Furious.</p>
+<a href="#" class="btn btn-outline btn-primary btn-medium btn-rounded wow bounceInUp" data-wow-delay="0.3s">read more</a>
+</div>
+<div class="service col-md-3  col-sm-6 col-xs-12 wow bounceInRight" data-wow-delay="0.5s">
+<div class="fa-4x service-icon icon icon-Mouse animate-icon"></div>
+<h3>Cleaning</h3>
+<p>Health is our Priority.</p>
+<a href="#" class="btn btn-outline btn-primary btn-medium btn-rounded wow bounceInUp" data-wow-delay="0.4s">read more</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</template>
+
+

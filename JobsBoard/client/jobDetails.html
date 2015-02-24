@@ -1,9 +1,13 @@
-<template name="projectDetails">
+<template name="jobDetails">
 	{{#afModal class="btn btn-success" collection="Applications" operation="insert"}}
 	Apply
 	{{/afModal}}
+	{{#if currentUser}}
 	{{> autoformModals collection="Applications" id="insertApplicationForm" type="insert"}}
-	The details of one project is to show here but its not showing
+	{{else}}
+	<h2> Please login</h2>
+	{{/if}}
+	The details of one job is to show here but its not showing
 	
 	<table class="table table-hover" id="dev-table">
 		<thead>
@@ -16,10 +20,10 @@
 		</thead>
 		<tbody>
 			<tr>
-				<td>{{projects.title}}</td>
-				<td>{{projects.description}}</td>
-				<td>{{projects.contactInformation}} </td>
-				<td>{{projects.category}} </td>
+				<td>{{jobs.title}}</td>
+				<td>{{jobs.description}}</td>
+				<td>{{jobs.contactInformation}} </td>
+				<td>{{jobs.category}} </td>
 				<td>
 				</td>
 				<!-- <td> -->

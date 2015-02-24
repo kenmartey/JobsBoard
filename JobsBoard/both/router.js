@@ -10,13 +10,13 @@ Router.route('/', function(){
 	name: 'home'
 });
 
-Router.route('/projects', function () {
-	this.render('projects');
+Router.route('/jobs', function () {
+	this.render('jobs');
 }, {
-	name: 'projects',
+	name: 'jobs',
 	data: function(){
 		return {
-			projects: Jobs.find().fetch().reverse()
+			jobs: Jobs.find().fetch().reverse()
 		}
 	}
 });
@@ -36,29 +36,29 @@ Router.route('/projects', function () {
 // 	});
 //===================
 
-Router.route('/projects/:category/', function(){
-	this.render('projects');
+Router.route('/jobs/:category/', function(){
+	this.render('jobs');
 },
 {
-	name:'projectsCategory',
+	name:'jobsCategory',
 	data: function(){
 		return {
-			projects: Jobs.find({category: this.params.category}).fetch().reverse(),
+			jobs: Jobs.find({category: this.params.category}).fetch().reverse(),
 			pageTitle: 'category:' + this.params.category
 		}
 	}
 
 });
 
-Router.route('/projects/details/:_id', function(){
-	this.render('projectDetails');
+Router.route('/jobs/details/:_id', function(){
+	this.render('jobDetails');
 },
 {
-	name: 'projectDetails',
+	name: 'jobDetails',
 	data: function(){
 		var _id = this.params._id;
 		return{
-			projects: Jobs.findOne(_id)
+			jobs: Jobs.findOne(_id)
 		}
 	}
 })

@@ -5,7 +5,7 @@
         /**
          * Init Function
          */
-        init: function() {
+         init: function() {
             Novelty.Preloader();
             Novelty.NiceScroll();
             // Novelty.FillFirstSection(); // Uncomment this function to automatically fill the first screen.
@@ -18,7 +18,7 @@
             Novelty.TeamMembers();
             Novelty.Tweets();
             Novelty.Portfolio();
-            Novelty.GoogleMap();
+            // Novelty.GoogleMap();
             Novelty.MCNewsletter();
             Novelty.WowAnimation();
             Novelty.svgFallback();
@@ -28,7 +28,7 @@
         svgFallback: function() {
             if (!Modernizr.smil) {
                 $("img[src$='.svg']")
-                    .attr("src", "images/preloading.gif");
+                .attr("src", "images/preloading.gif");
             }
 
         },
@@ -44,7 +44,7 @@
         NiceScroll: function() {
 
             var doc = $(document),
-                theHtml = $("html");
+            theHtml = $("html");
             theHtml.niceScroll();
 
 
@@ -96,10 +96,10 @@
                 callbackBefore: function(toggle, anchor) {}, // Function to run before scrolling
                 callbackAfter: function(toggle, anchor) {
 
-                        $('[data-scroll]').removeClass('active');
-                        $(toggle).addClass('active');
+                    $('[data-scroll]').removeClass('active');
+                    $(toggle).addClass('active');
                     } // Function to run after scrolling
-            });
+                });
         },
         LightGallery: function() {
             $("#novelty-gallery").lightGallery({
@@ -126,8 +126,8 @@
 
             // Cache selectors
             var lastId,
-                topMenu = $(".navbar-nav"),
-                topMenuHeight = topMenu.outerHeight() + 50,
+            topMenu = $(".navbar-nav"),
+            topMenuHeight = topMenu.outerHeight() + 50,
                 // All list items
                 menuItems = topMenu.find("a"),
                 // Anchors corresponding to menu items
@@ -159,8 +159,8 @@
                     lastId = id;
                     // Set/remove active class
                     menuItems
-                        .removeClass("active")
-                        .filter("[href=#" + id + "]").addClass("active");
+                    .removeClass("active")
+                    .filter("[href=#" + id + "]").addClass("active");
                 }
 
                 var item = $('#back-to-top');
@@ -171,34 +171,34 @@
                 }
 
             });
-        },
-        TeamMembers: function() {
-            $('.more-team-members li').on('mouseenter', function() {
-                $(this).children().next().hide().next().show();
+},
+TeamMembers: function() {
+    $('.more-team-members li').on('mouseenter', function() {
+        $(this).children().next().hide().next().show();
 
-            });
+    });
 
-            $('.more-team-members li').on('mouseleave', function() {
-                $(this).children().next().show().next().hide();
+    $('.more-team-members li').on('mouseleave', function() {
+        $(this).children().next().show().next().hide();
 
-            });
-        },
-        Tweets: function() {
-            $('.tweets').each(function() {
-                var tweets = $(this),
-                    data = tweets.data() || {};
-                tweets.tweet({
-                    modpath: 'javascripts/twitter/',
-                    username: data.username,
-                    count: data.count,
-                    template: "{text}{time}",
-                    loading_text: 'loading twitter feed...'
-                });
-            });
-        },
-        Portfolio: function() {
+    });
+},
+Tweets: function() {
+    $('.tweets').each(function() {
+        var tweets = $(this),
+        data = tweets.data() || {};
+        tweets.tweet({
+            modpath: 'javascripts/twitter/',
+            username: data.username,
+            count: data.count,
+            template: "{text}{time}",
+            loading_text: 'loading twitter feed...'
+        });
+    });
+},
+Portfolio: function() {
 
-            var $container = $('#makePortfolio').imagesLoaded(function() {
+    var $container = $('#makePortfolio').imagesLoaded(function() {
 
                 // init
                 $container.isotope({
@@ -209,22 +209,22 @@
 
 
             });
-            $('#filters').on('click', 'button', function() {
-                var filterValue = $(this).attr('data-filter');
-                $container.isotope({
-                    filter: filterValue
-                });
+    $('#filters').on('click', 'button', function() {
+        var filterValue = $(this).attr('data-filter');
+        $container.isotope({
+            filter: filterValue
+        });
 
-            });
-            $('.controls').each(function(i, buttonGroup) {
-                var $buttonGroup = $(buttonGroup);
-                $buttonGroup.on('click', 'button', function() {
-                    $buttonGroup.find('.active').removeClass('active');
-                    $(this).addClass('active');
-                });
-            });
-        },
-        GoogleMap: function() {
+    });
+    $('.controls').each(function(i, buttonGroup) {
+        var $buttonGroup = $(buttonGroup);
+        $buttonGroup.on('click', 'button', function() {
+            $buttonGroup.find('.active').removeClass('active');
+            $(this).addClass('active');
+        });
+    });
+},
+GoogleMap: function() {
 
             // The latitude and longitude of your business / place
             var position = [27.1959739, 78.02423269999997];
