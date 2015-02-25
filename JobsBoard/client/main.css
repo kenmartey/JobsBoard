@@ -152,3 +152,12 @@
 			margin-top: 0px;
 			padding-bottom: 0;
 		}
+		.form-control{
+			width: 400px;
+
+		}
+		.application-form{
+			margin-left: 400px;
+			background-color: blue;
+			width: 400px; 	
+		}

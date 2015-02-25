@@ -1,5 +1,6 @@
 Router.configure({
 	layoutTemplate: "masterLayout",
+	notFoundTemplate: '404'
 	
 })
 
@@ -21,19 +22,18 @@ Router.route('/jobs', function () {
 	}
 });
 //==============
-// Router.route('/projects/userId/projects', function(){
-// 	this.render('projects');
+// Router.route('/jobs/details/:_id', function(){
+// 	this.render('applications');
 // },
 // {
-// 	name:'projectsCategory',
+// 	name:'applications',
 // 	data: function(){
 // 		return {
-// 			projects: Jobs.find({Meteor.userId: this.params.Meteor.userId()).fetch().reverse(),
-// 				pageTitle: 'projects:' + this.params.userId
-// 			}
+// 			applications: Applications.find().fetch()
 // 		}
+// 	}
 
-// 	});
+// });
 //===================
 
 Router.route('/jobs/:category/', function(){
@@ -52,13 +52,15 @@ Router.route('/jobs/:category/', function(){
 
 Router.route('/jobs/details/:_id', function(){
 	this.render('jobDetails');
+	
 },
 {
 	name: 'jobDetails',
 	data: function(){
 		var _id = this.params._id;
-		return{
-			jobs: Jobs.findOne(_id)
+		return{ 
+
+			job: Jobs.findOne(_id)			
 		}
 	}
 })
@@ -69,3 +71,9 @@ Router.route('/about', function () {
 }, {
 	name: 'about'
 });
+
+// Router.route('/jobDetails', function(){
+// 	waitOn:{
+// 		Meteor.subscribe 'images';
+// 	},
+// });

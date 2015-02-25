@@ -8,30 +8,43 @@ Applications.attachSchema(new SimpleSchema({
 	},
 	briefSummary: {
 		type: String,
-		label: "Brief summary",
+		label: "Why do you want this Job",
 		optional: true,
 		max: 1000,
 		autoform: {
 			rows: 2
 		}
 	},
+
+
 	email: {
 		type: String,
 		regEx: SimpleSchema.RegEx.Email,
 		label: "Email"
 	},
+
 	contact: {
-		type: String,
+		type: Number,
 		label: "Phone Number"
+		
 	},
 	uploadCV: {
 		type: String,
 		label: "UploadCV"
 	},
-	uploadImage: {
-		type: String,
-		label: "UploadImage"
-	},
+
+	// uploadImage: {
+	// 	type: String,
+	// 	autoform:{
+	// 		afFieldInput:{
+
+	// 			type: 'fileUpload',
+	// 			collection: 'Images',
+	// 			label: 'Choose file' 
+	// 		}
+	// 	}
+	// },
+
 	qualification: {
 		type: String,
 		label: "Qualification",
@@ -48,5 +61,22 @@ Applications.attachSchema(new SimpleSchema({
 			}
 		}
 	},
+	job: {
+		type: String,
+		autoform: {
+			omit: true
+		}
+	},
+	// owner: {
+	// 	type: String,
+	// 	autoform: {
+	// 		omit: true
+	// 	},
+	// 	autoValue: function(){
+	// 		if (this.isInsert){
+	// 			return Meteor.userId();
+	// 		}
+	// 	}
+	// },
 
 }));

@@ -19,3 +19,7 @@ iron:router
 accounts-github
 accounts-facebook
 accounts-twitter
+yogiben:autoform-file
+jeremy:selectize
+comerc:autoform-selectize
+chhib:selectize-bootstrap-3

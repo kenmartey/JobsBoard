@@ -29,6 +29,10 @@
 					<div class="card">
 						<div class="title">
 							<p id="card-title" align="left"><strong>{{title}}</strong></p>
+							<p id="card-title" align="right">
+								
+							</p>
+
 						</div>
 						<div class="demo-live">
 							<h3>{{category}}</h3>
@@ -46,7 +50,7 @@
 							{{/afModal}}
 
 							{{#afModal class="btn btn-danger" collection="Jobs" operation="remove" doc=_id}}<i class="fa fa-trash-o"></i>
-							
+
 							{{/afModal}}
 							{{/if}}
 							<a href="{{pathFor 'jobDetails' _id=_id}}" class="btn btn-info">Readmore</a>
