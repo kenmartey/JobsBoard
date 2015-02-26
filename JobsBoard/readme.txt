@@ -311,4 +311,32 @@ omit: true
 }
 }
 
+// ======================== job details ============================
+<div class="table">
+<table class="table table-hover" id="dev-table">
+<thead>
+<tr>
+<th>Job Title</th>
+<th>Job Description</th>
+<th>Contact Information</th>
+<th>Job Category</th>
+</tr>
+</thead>
+{{#each applications}}
+<tbody>
+<tr>
+<td>{{fullName}}</td>
+<td>{{briefSummary}}</td>
+<td>{{email}} </td>
+<td>{{contact}} </td>
+<td>{{uploadCV}} </td>
 
+<td>
+</td>
+<!-- <td> -->
+<!-- </td> -->
+</tr>
+</tbody>
+{{/each}}
+</table>
+</div>

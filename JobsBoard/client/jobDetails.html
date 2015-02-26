@@ -1,45 +1,69 @@
 <template name="jobDetails">
-	<!-- {{#afModal class="btn btn-success" collection="Applications" operation="insert"}}
-	Apply
-	{{/afModal}} -->
-	
-	The details of one job is to show here but its not showing
-	<div class="table">
-		<table class="table table-hover" id="dev-table">
-			<thead>
-				<tr>
-					<th>Job Title</th>
-					<th>Job Description</th>
-					<th>Contact Information</th>
-					<th>Job Category</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>{{job.title}}</td>
-					<td>{{job.description}}</td>
-					<td>{{job.contactInformation}} </td>
-					<td>{{job.category}} </td>
-					<td>
-					</td>
-					<!-- <td> -->
-					<!-- </td> -->
-				</tr>
-			</tbody>
-		</table>
-	</div>
-
-	<div class="application-form">
-		<div class="panel panel-header">
-			
-			Apply For this Job
-			{{> quickForm collection="Applications" id="insertApplicationForm" type="insert"}}
-			<div class="panel-body">
+	Apply For this Job
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+		Apply Now
+	</button>
+	<section>
+		<div class="container">
+			<div class="row">
 				
+				<div class="col-md-4">
+					<div class="card">
+						<div class="title">
+							<p id="card-title" align="left"><strong>{{job.title}}</strong></p>
+							<p id="card-title" align="right">
+								
+							</p>
+
+						</div>
+						<div class="demo-live">
+							<h3>{{job.category}}</h3>
+							{{job.description}}
+							<div id="contact-alignment">
+								{{job.contactInformation}} 
+							</div>
+						</div>
+						<div class="demo-source-head">
+							<span class="pointer-up"></span>
+
+						</div>
+
+					</div>
+				</div>
+				
+
 			</div>
 		</div>
+	</section> 
 
+	
+
+	
+
+
+
+	<!-- Button trigger modal -->
+
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Application Form</h4>
+				</div>
+				<div class="modal-body">
+					{{> quickForm collection="Applications" id="insertApplicationForm" type="insert"}}
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+				</div>
+			</div>
+		</div>
 	</div>
+
+
 
 </template>
 

@@ -1,0 +1,67 @@
+<template name="viewapplications">
+
+	<section>
+		<div class="container">
+			<div class="row">
+				
+				<div class="col-md-4">
+					<div class="card">
+						<div class="title">
+							<p id="card-title" align="left"><strong>{{job.title}}</strong></p>
+							<p id="card-title" align="right">
+								
+							</p>
+
+						</div>
+						<div class="demo-live">
+							<h3>{{job.category}}</h3>
+							{{job.description}}
+							<div id="contact-alignment">
+								{{job.contactInformation}} 
+							</div>
+						</div>
+						<div class="demo-source-head">
+							<span class="pointer-up"></span>
+
+						</div>
+
+					</div>
+				</div>
+				
+
+			</div>
+		</div>
+	</section> 
+
+	<div class="table">
+		<table class="table table-hover" id="dev-table">
+			<thead>
+				<tr>
+					<th>Job Title</th>
+					<th>Job Description</th>
+					<th>Contact Information</th>
+					<th>Job Category</th>
+				</tr>
+			</thead>
+			<!-- {{#if currentUser}} -->
+			{{#each applications}}
+			<tbody>
+				<tr>
+					<td>{{fullName}}</td>
+					<td>{{briefSummary}}</td>
+					<td>{{email}} </td>
+					<td>{{contact}} </td>
+					<td>{{uploadCV}} </td>
+
+					<td>
+					</td>
+					<!-- <td> -->
+					<!-- </td> -->
+				</tr>
+			</tbody>
+			{{/each}}
+			<!-- {{/if}} -->
+		</table>
+	</div>
+
+</template>

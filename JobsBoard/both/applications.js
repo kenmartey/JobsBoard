@@ -67,16 +67,16 @@ Applications.attachSchema(new SimpleSchema({
 			omit: true
 		}
 	},
-	// owner: {
-	// 	type: String,
-	// 	autoform: {
-	// 		omit: true
-	// 	},
-	// 	autoValue: function(){
-	// 		if (this.isInsert){
-	// 			return Meteor.userId();
-	// 		}
-	// 	}
-	// },
+	owner: {
+		type: String,
+		autoform: {
+			omit: true
+		},
+		autoValue: function(){
+			if (this.isInsert){
+				return Meteor.userId();
+			}
+		}
+	},
 
 }));
