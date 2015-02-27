@@ -37,10 +37,12 @@
 		<table class="table table-hover" id="dev-table">
 			<thead>
 				<tr>
-					<th>Job Title</th>
-					<th>Job Description</th>
-					<th>Contact Information</th>
-					<th>Job Category</th>
+					<th>FullName</th>
+					<th>why this Job</th>
+					<th>Email</th>
+					<th>contact</th>
+					<th>CV</th>
+					<th>Picture</th>
 				</tr>
 			</thead>
 			<!-- {{#if currentUser}} -->
@@ -51,8 +53,9 @@
 					<td>{{briefSummary}}</td>
 					<td>{{email}} </td>
 					<td>{{contact}} </td>
-					<td>{{uploadCV}} </td>
-
+					<td>{{uploadCV}} </td>{{#with FS.GetFile 'images' picture}}
+					<img class="img-thumbnail img-rounded" src="{{this.url}}" alt="" >
+					{{/with}}
 					<td>
 					</td>
 					<!-- <td> -->

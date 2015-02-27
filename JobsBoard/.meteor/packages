@@ -23,3 +23,6 @@ yogiben:autoform-file
 jeremy:selectize
 comerc:autoform-selectize
 chhib:selectize-bootstrap-3
+cfs:standard-packages
+cfs:gridfs
+cfs:ui

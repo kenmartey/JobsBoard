@@ -3,7 +3,7 @@ Applications.attachSchema(new SimpleSchema({
 
 	fullName: {
 		type: String,
-		label: "Title",
+		label: "FullName",
 		max: 200
 	},
 	briefSummary: {
@@ -33,18 +33,16 @@ Applications.attachSchema(new SimpleSchema({
 		label: "UploadCV"
 	},
 
-	// uploadImage: {
-	// 	type: String,
-	// 	autoform:{
-	// 		afFieldInput:{
-
-	// 			type: 'fileUpload',
-	// 			collection: 'Images',
-	// 			label: 'Choose file' 
-	// 		}
-	// 	}
-	// },
-
+	picture: {
+		type: String,
+		autoform: {
+			afFieldInput: {
+				type: 'fileUpload',
+				collection: 'Images'
+			}
+		},
+		label: 'Choose file'
+	},
 	qualification: {
 		type: String,
 		label: "Qualification",

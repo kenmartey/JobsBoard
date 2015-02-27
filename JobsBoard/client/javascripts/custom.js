@@ -41,14 +41,13 @@
                 $('body').delay(500);
             });
         },
+        
         NiceScroll: function() {
-
             var doc = $(document),
             theHtml = $("html");
             theHtml.niceScroll();
-
-
         },
+
         ChangeOpacity: function() {
             var h = window.innerHeight;
             $(window).on('scroll', function() {

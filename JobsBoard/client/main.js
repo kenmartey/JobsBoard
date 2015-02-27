@@ -13,3 +13,13 @@
 // Add this to the html document
 // {{#if $eq User._id owner}}
 // {{/if}}
+
+// Template.registerHelper('getImg', function(picture){
+// 	return Images.findOne(picture).url()
+// 	console.log()
+// })
+
+// Template.masterLayout.rendered =  function(){
+// 	Novelty.NiceScroll();
+// 	console.log('ran')
+// }

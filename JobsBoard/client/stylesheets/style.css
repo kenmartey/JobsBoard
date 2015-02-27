@@ -311,7 +311,7 @@ Sections CSS
 **********************************/
 /************ Home Slider ********/
 section {
-  /*overflow: hidden;*/
+  overflow: hidden;
   padding-bottom: 70px;
 }
 section .section-sub-heading {
@@ -561,7 +561,7 @@ section.home-slider p {
       width: 33%;
     }
     .portfolio .portfolio-container .portfolio-item {
-      /*overflow: hidden;*/
+      overflow: hidden;
       cursor: pointer;
       width: 33%;
       position: relative;
@@ -697,7 +697,7 @@ section.home-slider p {
       transition: all 0.5s;
     }
     .team-member .member-image {
-      /*overflow: hidden;*/
+      overflow: hidden;
     }
     .team-member h3 {
       font-size: 1em;
@@ -812,7 +812,7 @@ section.home-slider p {
       cursor: pointer;
       padding: 0px;
       position: relative;
-      /*overflow: hidden;*/
+      overflow: hidden;
       -moz-transition: all 0.3s ease;
       -o-transition: all 0.3s ease;
       -webkit-transition: all 0.3s ease;
@@ -1002,7 +1002,7 @@ section.home-slider p {
 
     .about-tab-content {
       margin-top: 1.5em;
-      /*overflow: hidden;*/
+      overflow: hidden;
       background: #0084DD;
     }
     .about-tab-content .tab-pane div[class^='col-md-'], .about-tab-content .tab-pane div[class*='col-md'] {
@@ -1223,7 +1223,7 @@ section.home-slider p {
       height: 50px;
     }
     section#contact .contact-form textarea {
-      /*overflow: hidden;*/
+      overflow: hidden;
       padding: 25px !important;
       height: 200px !important;
       -moz-border-radius: 1em;
