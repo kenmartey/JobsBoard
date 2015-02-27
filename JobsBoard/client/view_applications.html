@@ -53,18 +53,19 @@
 					<td>{{briefSummary}}</td>
 					<td>{{email}} </td>
 					<td>{{contact}} </td>
-					<td>{{uploadCV}} </td>{{#with FS.GetFile 'images' picture}}
-					<img class="img-thumbnail img-rounded" src="{{this.url}}" alt="" >
-					{{/with}}
-					<td>
-					</td>
-					<!-- <td> -->
-					<!-- </td> -->
-				</tr>
-			</tbody>
-			{{/each}}
-			<!-- {{/if}} -->
-		</table>
-	</div>
+					<td>{{uploadCV}} </td>
+					<td>{{#with FS.GetFile 'images' picture}}
+						<img class="img-thumbnail img-rounded" src="{{this.url}}" alt="" >
+						{{/with}}</td>
+						<td>
+						</td>
+						<!-- <td> -->
+						<!-- </td> -->
+					</tr>
+				</tbody>
+				{{/each}}
+				<!-- {{/if}} -->
+			</table>
+		</div>
 
-</template>
+	</template>
