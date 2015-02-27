@@ -3,7 +3,6 @@
 	<section>
 		<div class="container">
 			<div class="row">
-				
 				<div class="col-md-4">
 					<div class="card">
 						<div class="title">
@@ -32,40 +31,60 @@
 			</div>
 		</div>
 	</section> 
+	<div class="container">
 
-	<div class="table">
-		<table class="table table-hover" id="dev-table">
-			<thead>
-				<tr>
-					<th>FullName</th>
-					<th>why this Job</th>
-					<th>Email</th>
-					<th>contact</th>
-					<th>CV</th>
-					<th>Picture</th>
-				</tr>
-			</thead>
-			<!-- {{#if currentUser}} -->
-			{{#each applications}}
-			<tbody>
-				<tr>
-					<td>{{fullName}}</td>
-					<td>{{briefSummary}}</td>
-					<td>{{email}} </td>
-					<td>{{contact}} </td>
-					<td>{{uploadCV}} </td>
-					<td>{{#with FS.GetFile 'images' picture}}
-						<img class="img-thumbnail img-rounded" src="{{this.url}}" alt="" >
-						{{/with}}</td>
-						<td>
-						</td>
-						<!-- <td> -->
-						<!-- </td> -->
-					</tr>
-				</tbody>
-				{{/each}}
-				<!-- {{/if}} -->
-			</table>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Applicants</h3>
+						<div class="pull-right">
+							<span class="clickable filter" data-toggle="tooltip" title="Toggle table filter" data-container="body">
+								<i class="glyphicon glyphicon-filter"></i>
+							</span>
+						</div>
+					</div>
+					<div class="panel-body">
+						<input type="text" class="form-control" id="dev-table-filter" data-action="filter" data-filters="#dev-table" placeholder="Filter Developers" />
+					</div>
+					<div class="table">
+						<table class="table table-hover" id="dev-table">
+							<thead>
+								<tr>
+									<th>FullName</th>
+									<th>why this Job</th>
+									<th>Email</th>
+									<th>contact</th>
+									<th>CV</th>
+									<th>Picture</th>
+								</tr>
+							</thead>
+							<!-- {{#if currentUser}} -->
+							{{#each applications}}
+							<tbody>
+								<tr>
+									<td>{{fullName}}</td>
+									<td>{{briefSummary}}</td>
+									<td>{{email}} </td>
+									<td>{{contact}} </td>
+									<td>{{uploadCV}} </td>
+									<td>{{#with FS.GetFile 'images' picture}}
+										<img class="img-thumbnail" width="125px" height="125px" src="{{this.url}}" alt="" >
+										{{/with}}</td>
+										<td>
+										</td>
+										<!-- <td> -->
+										<!-- </td> -->
+									</tr>
+								</tbody>
+								{{/each}}
+								<!-- {{/if}} -->
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+
 
 	</template>

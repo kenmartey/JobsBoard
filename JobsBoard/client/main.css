@@ -162,4 +162,36 @@
 			width: 400px; 	
 		}
 
+		.applicants-table{
+			width: 300px;
+
+			position: relative;
+			min-height: 1px;
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+		.col-md-6{
+			width: 90%;
+			margin-left: 40px;
+		}
 		
+/*Applications table
+*/
+/*.row{
+	margin-top:40px;
+	padding: 0 10px;
+}
+.clickable{
+	cursor: pointer;   
+}
+
+.panel-heading div {
+	margin-top: -18px;
+	font-size: 15px;
+}
+.panel-heading div span{
+	margin-left:5px;
+}
+.panel-body{
+	display: none;
+}*/
