@@ -194,4 +194,22 @@
 }
 .panel-body{
 	display: none;
-}*/
+	}*/
+
+/*==============second card session=================
+*/
+
+.wflow {
+	margin: 0;
+	padding: 20px 20px 15px;
+}
+.wflow.automate {
+	border-top-color: #6aaecf;
+}
+.wflow {
+	margin: 0 1em 1.5em;
+	border-top: 6px solid;
+	border-radius: 3px;
+	box-shadow: 0 2px 4px rgba(0,0,0,.2);
+	padding: 20px 26px 15px;
+}

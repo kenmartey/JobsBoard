@@ -2,6 +2,7 @@
 
 	<div class="container">
 		<div class="row">
+			{{#if currentUser}}
 			{{# each jobs}}
 			{{#if owned}}
 			<div class="col-md-4">
@@ -38,7 +39,11 @@
 			</div>
 			{{/if}}
 			{{/each}}
+			{{else}}
+			<div class="alert alert-info" style="margin-top:100px;">
+				<h4>Please you need to login to view any information here</h4>
+			</div>
+			{{/if}}
 		</div>
 	</div>	
-	
 </template>

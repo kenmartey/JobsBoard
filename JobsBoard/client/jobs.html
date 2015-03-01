@@ -7,7 +7,10 @@
 		{{/afModal}}
 		{{> autoformModals collection="Jobs" id="insertJobForm" type="insert"}}
 		{{else}}
-		please Register or login to Add a Job
+		<div class="alert alert-info">
+			
+			<h5>please Register or login to Add a Job</h5>
+		</div>
 		{{/if}}
 	</div> 
 	
@@ -22,44 +25,24 @@
 
 
 	<section>
+
 		<div class="container">
 			<div class="row">
+				
 				{{# each jobs}}
-				<div class="col-md-4">
-					<div class="card">
-						<div class="title">
-							<p id="card-title" align="left"><strong>{{title}}</strong></p>
-							<p id="card-title" align="right">
-								
-							</p>
+				<div class="col-sm-4">
+					<div class="wflow automate">
 
+						<strong>{{title}}</strong>
+						<h3>{{category}}</h3>
+						{{description}}
+						<div id="contact-alignment">
+							{{contactInformation}} 
 						</div>
-						<div class="demo-live">
-							<h3>{{category}}</h3>
-							{{description}}
-							<div id="contact-alignment">
-								{{contactInformation}} 
-							</div>
-						</div>
-						<div class="demo-source-head">
-							<span class="pointer-up"></span>
-
-							<!-- {{#if owned}}
-							{{#afModal class="btn btn-primary" collection="Jobs" operation="update" doc=_id}}<i class="fa fa-pencil"></i>
-
-							{{/afModal}}
-
-							{{#afModal class="btn btn-danger" collection="Jobs" operation="remove" doc=_id}}<i class="fa fa-trash-o"></i>
-
-							{{/afModal}}
-							{{/if}} -->
-							<a href="{{pathFor 'jobDetails' _id=_id}}" class="btn btn-info">Readmore</a>
-						</div>
-
+						<a href="{{pathFor 'jobDetails' _id=_id}}" class="btn btn-info">Readmore</a>
 					</div>
 				</div>
 				{{/each}}
-
 			</div>
 		</div>
 	</section> 

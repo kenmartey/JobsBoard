@@ -340,3 +340,16 @@ omit: true
 {{/each}}
 </table>
 </div>
+
+
+//=================JOBS.HTML====================
+
+<!-- {{#if owned}}
+{{#afModal class="btn btn-primary" collection="Jobs" operation="update" doc=_id}}<i class="fa fa-pencil"></i>
+
+{{/afModal}}
+
+{{#afModal class="btn btn-danger" collection="Jobs" operation="remove" doc=_id}}<i class="fa fa-trash-o"></i>
+
+{{/afModal}}
+{{/if}} -->
