@@ -6,7 +6,6 @@
 
 meteor-platform
 autopublish
-insecure
 fortawesome:fontawesome
 twbs:bootstrap
 aldeed:autoform
@@ -27,3 +26,4 @@ cfs:standard-packages
 cfs:gridfs
 cfs:ui
 yogiben:admin
+cfs:autoform

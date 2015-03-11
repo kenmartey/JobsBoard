@@ -30,7 +30,13 @@ Applications.attachSchema(new SimpleSchema({
 	},
 	uploadCV: {
 		type: String,
-		label: "UploadCV"
+		autoform: {
+			afFieldInput: {
+				type: "cfs-file",
+				collection: "files"
+			}
+		},
+		label: 'upload CV'
 	},
 
 	picture: {

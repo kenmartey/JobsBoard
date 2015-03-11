@@ -1,3 +1,12 @@
+// Router.onBeforeAction(function(pause) {
+// 	if (!Meteor.user()) {
+// 		pause();
+// 		Router.go('\home');
+// 	}
+// }, {except: ['home','about','jobs', 'dashboard', 'view_applications']});
+
+
+
 AutoForm.addHooks(null,	{
 	onError: function(operation,error,template){
 		console.log('Error: ' + error);

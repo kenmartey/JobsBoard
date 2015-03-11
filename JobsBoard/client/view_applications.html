@@ -3,31 +3,16 @@
 	<section>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
-					<div class="card">
-						<div class="title">
-							<p id="card-title" align="left"><strong>{{job.title}}</strong></p>
-							<p id="card-title" align="right">
-								
-							</p>
-
+				<div class="col-sm-4">
+					<div class="wflow automate">
+						<strong>{{job.title}}</strong>
+						<h3>{{job.category}}</h3>
+						{{job.description}}
+						<div id="contact-alignment">
+							{{job.contactInformation}} 
 						</div>
-						<div class="demo-live">
-							<h3>{{job.category}}</h3>
-							{{job.description}}
-							<div id="contact-alignment">
-								{{job.contactInformation}} 
-							</div>
-						</div>
-						<div class="demo-source-head">
-							<span class="pointer-up"></span>
-
-						</div>
-
 					</div>
 				</div>
-				
-
 			</div>
 		</div>
 	</section> 
@@ -67,24 +52,30 @@
 									<td>{{briefSummary}}</td>
 									<td>{{email}} </td>
 									<td>{{contact}} </td>
-									<td>{{uploadCV}} </td>
-									<td>{{#with FS.GetFile 'images' picture}}
-										<img class="img-thumbnail" width="125px" height="125px" src="{{this.url}}" alt="" >
+									<td>{{#with FS.GetFile 'files' uploadCV}}
+										<a href="{{this.url}}" download="CV">{{this.name}}</a>
 										{{/with}}</td>
-										<td>
-										</td>
-										<!-- <td> -->
-										<!-- </td> -->
-									</tr>
-								</tbody>
-								{{/each}}
-								<!-- {{/if}} -->
-							</table>
+
+										<!-- <td><a class='download'>download {{getFileName uploadCV}}</a> </td> -->
+
+
+
+										<td>{{#with FS.GetFile 'images' picture}}
+											<img class="img-thumbnail" width="125px" height="125px" src="{{this.url}}" alt="" >
+											{{/with}}</td>
+											<td>
+											</td>
+											<!-- <td> -->
+											<!-- </td> -->
+										</tr>
+									</tbody>
+									<td><i class="fa fa-trash-o"></i></td>
+									{{/each}}
+									<!-- {{/if}} -->
+								</table>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
-
-	</template>
+		</template>

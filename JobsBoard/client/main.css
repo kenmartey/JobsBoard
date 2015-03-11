@@ -2,7 +2,7 @@
 ================BOOTSTRAP CSS FOR THE TABLE=================
 */
 .col-md-6 {
-	/*width: 100%;*/
+	width: 100%;
 }
 .row{
 	margin-top:40px;
@@ -26,13 +26,7 @@
 /*
 ============= BOOTSTRAP CSS ==============
 */
-/*.navbar-brand
-{
-	background: url(img/mest-logo.png) no-repeat left center;
-	height: 20px;
-	width: 100px;
-}
-*/
+
 .navbar {
 	box-shadow: 3px 3px 3px #999; 
 	-moz-box-shadow: 3px 3px 3px #999;
@@ -67,17 +61,6 @@
 		width: 100%;
 		
 	}
-/*  ========= cards =========
-*/
-
-/*.card{
-	width: 200px;
-	height: 200px;
-	background-color: blue;
-	box-shadow: 10px 10px 5px #888888;
-	color: white;
-	margin-left: 20px;
-	}*/
 
 	.card {
 		width: 100%;
@@ -121,80 +104,57 @@
 		/*padding: 15px 0;*/
 		line-height: 1.6em;
 	}
-	/*.half-l {
-		width: 48%;
-		float: left;
-		margin-right: 2%;
-		}*/
-		.title{
-			margin-top: 5px;
-			height: 40px;
-			border-color: black;
-			font-size:20px;
+	
+	.title{
+		margin-top: 5px;
+		height: 40px;
+		border-color: black;
+		font-size:20px;
 
-		}
-		#card-title{
-			margin-left: 10px;
-			margin-top: 10px;
-			text-shadow: 0px 1px 0.5px #fff;
-			padding: 10px;	
+	}
+	#card-title{
+		margin-left: 10px;
+		margin-top: 10px;
+		text-shadow: 0px 1px 0.5px #fff;
+		padding: 10px;	
 
-		}
-		#contact-alignment{
-			margin-top: 100px;
-		}
+	}
+	#contact-alignment{
+		margin-top: 100px;
+	}
 
-		.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-			margin-left: -20;
-			padding: 30px;
-		}
-		section.slider {
-			margin-top: 0px;
-			padding-bottom: 0;
-		}
-		.form-control{
-			width: 400px;
+	.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+		margin-left: -20;
+		padding: 30px;
+	}
+	section.slider {
+		margin-top: 0px;
+		padding-bottom: 0;
+	}
+	.form-control{
+		width: 400px;
 
-		}
-		.application-form{
-			margin-left: 400px;
-			background-color: blue;
-			width: 400px; 	
-		}
+	}
+	.application-form{
+		margin-left: 400px;
+		background-color: blue;
+		width: 400px; 	
+	}
 
-		.applicants-table{
-			width: 300px;
+	.applicants-table{
+		width: 300px;
 
-			position: relative;
-			min-height: 1px;
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-		.col-md-6{
-			width: 90%;
-			margin-left: 40px;
-		}
-		
-/*Applications table
-*/
-/*.row{
-	margin-top:40px;
-	padding: 0 10px;
-}
-.clickable{
-	cursor: pointer;   
-}
+		position: relative;
+		min-height: 1px;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.col-md-6{
+		width: 90%;
+		margin-left: 40px;
+	}
+	
 
-.panel-heading div {
-	margin-top: -18px;
-	font-size: 15px;
-}
-.panel-heading div span{
-	margin-left:5px;
-}
-.panel-body{
-	display: none;
-	}*/
 
 /*==============second card session=================
 */
