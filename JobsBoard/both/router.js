@@ -1,5 +1,6 @@
 Router.configure({
 	layoutTemplate: "masterLayout",
+	loadingTemplate: "loadingTemplate",
 	notFoundTemplate: '404'
 	
 })
@@ -14,6 +15,9 @@ Router.route('/', function(){
 Router.route('/jobs', function () {
 	this.render('jobs');
 }, {
+	waitOn: function(){
+		Meteor.subscribe('jobs')
+	},
 	name: 'jobs',
 	data: function(){
 		return {
@@ -56,6 +60,16 @@ Router.route('/jobs/details/:_id', function(){
 },
 {
 	name: 'jobDetails',
+
+	waitOn: function(){
+		var _id = this.params._id;
+		console.log(_id);
+		return
+		[
+		Meteor.subscribe('jobDetails',_id)
+		
+		]
+	},
 	data: function(){
 		var _id = this.params._id;
 		return{ 
@@ -88,6 +102,10 @@ Router.route('/dashboard/job/applications/:_id', function(){
 },
 {
 	name: 'viewapplications',
+	waitOn: function(){
+		var _id = this.params._id;
+		Meteor.subscribe('applications',_id)
+	},
 	data: function(){
 		var _id = this.params._id;
 		return{ 

@@ -34,10 +34,18 @@ Template.registerHelper('getcvurl', function(_id){
 // 	return f.name();
 // })
 
-// Template.viewapplications.events({
-// 	'click a.download': function (event, template) {
-// 		event.preventDefault();
-// 		alert(Files.findOne(this.uploadCV))
+Template.jobDetails.events({
+	'click #sendmail': function (event, template) {
+		// event.preventDefault();
+		console.log("hey you")
+		Meteor.call('sendEmail');
+		// alert(Files.findOne(this.uploadCV))
+	}
+});
+
+// Template.jobs.events({
+// 	'click #showemail': function(_id){
+// 		_id = Jobs.findOne(_id);
+// 		console.log("hey show email")
 // 	}
 // });
-

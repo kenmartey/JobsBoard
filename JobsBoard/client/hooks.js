@@ -1,9 +1,14 @@
-// Router.onBeforeAction(function(pause) {
-// 	if (!Meteor.user()) {
-// 		pause();
-// 		Router.go('\home');
-// 	}
-// }, {except: ['home','about','jobs', 'dashboard', 'view_applications']});
+Router.onBeforeAction(function(pause) {
+	if (!Meteor.user()) {
+		// pause();
+		alert("you need to be logged-in to view this page, Redirecting you to Home!")
+		Router.go('\home');
+	}
+	else{
+		this.next();
+	}
+}, {except: ['home','about','jobs', 'dashboard']});
+
 
 
 

@@ -5,7 +5,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 fortawesome:fontawesome
 twbs:bootstrap
 aldeed:autoform
@@ -27,3 +26,4 @@ cfs:gridfs
 cfs:ui
 yogiben:admin
 cfs:autoform
+email

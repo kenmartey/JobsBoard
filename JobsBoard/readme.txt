@@ -353,3 +353,7 @@ omit: true
 
 {{/afModal}}
 {{/if}} -->
+
+
+Email should be sent to the job owner
+get the email of the job owner and pass it into a variable
